@@ -496,7 +496,7 @@
                         'params' : {}
                     };
                 </script>
-                <script type="text/javascript" src="//www.highperformanceformat.com/af3ac5da264d48edf05886e0c3d572c2/invoke.js"></script>
+                <script type="text/javascript" src="www//pl27788995.effectivegatecpm.com/6b/d9/52/6bd952944ab2ee29fcf243673b244d1a.js"></script>
             </center>
         </div>
         
@@ -853,6 +853,44 @@ show_9932036().then(() => {
     alert('You have seen an ad!');
 })
 
+
+// Rewarded Popup
+
+show_9932036('pop').then(() => {
+    // user watch ad till the end or close it in interstitial format
+    // your code to reward user for rewarded format
+}).catch(e => {
+    // user get error during playing ad
+    // do nothing or whatever you want
+})
+
+        
+
+// In-App Interstitial
+
+show_9932036({
+  type: 'inApp',
+  inAppSettings: {
+    frequency: 2,
+    capping: 0.1,
+    interval: 30,
+    timeout: 5,
+    everyPage: false
+  }
+})
+
+/*
+This value is decoded as follows:
+- show automatically 2 ads
+  within 0.1 hours (6 minutes)
+  with a 30-second interval between them
+  and a 5-second delay before the first one is shown.
+  The last digit, 0, means that the session will be saved when you navigate between pages.
+  If you set the last digit as 1, then at any transition between pages,
+  the session will be reset, and the ads will start again.
+*/
+
+
         // Load user data from localStorage
         function loadUserData() {
             if (localStorage.getItem('watchedAdsCount')) {
@@ -1154,5 +1192,6 @@ show_9932036().then(() => {
     </script>
 </body>
 </html>
+
 
 
