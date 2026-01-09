@@ -845,15 +845,13 @@
             }, 2000);
         }
 
-        // Check if Monetag ad is ready
-        function checkAdReady() {
-            if (typeof window.show_9932036 !== 'function') {
-                document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
-                setTimeout(checkAdReady, 1000);
-            } else {
-                document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত';
-            }
-        }
+        // Rewarded interstitial
+
+show_9932036().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen an ad!');
+})
 
         // Load user data from localStorage
         function loadUserData() {
@@ -1156,4 +1154,5 @@
     </script>
 </body>
 </html>
+
 
